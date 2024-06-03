@@ -24,7 +24,9 @@ urlpatterns = [
     path("users/", include("ai_solutions.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
-    # ...
+    path('regression/', include('ai_solutions.regression.urls', namespace='regression')),
+
+
     # Media files
     *static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT),
 ]
